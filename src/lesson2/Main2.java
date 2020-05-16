@@ -1,10 +1,9 @@
 package lesson2;
 
-import java.util.Random;
 
 public class Main2 {
 
-    public static final int MAX_DIGIT = 50;
+    public static final int MAX_NUMBER = 50;
 
     public static void main(String[] args) {
 
@@ -68,14 +67,12 @@ public class Main2 {
 
         if (isBalanced(array1)) {
             System.out.println("Array is balanced");
-            ;
         } else {
             System.out.println("Array is not balabced");
         }
 
         if (isBalanced(array2)) {
             System.out.println("Array is balanced");
-            ;
         } else {
             System.out.println("Array is not balabced");
         }
@@ -83,7 +80,6 @@ public class Main2 {
 
         if (isBalanced(array3)) {
             System.out.println("Array is balanced");
-            ;
         } else {
             System.out.println("Array is not balabced");
         }
@@ -107,10 +103,9 @@ public class Main2 {
     }
 
     private static void task5() {
-        Random random = new Random();
         int[] array = new int[20];
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * MAX_DIGIT);
+            array[i] = (int) (Math.random() * MAX_NUMBER);
         }
         print(array);
         System.out.printf("Minimum number = %d\n", min(array));
@@ -192,9 +187,9 @@ public class Main2 {
     }
 
     private static void printTable(int[][] arrTable) {
-        for (int i = 0; i < arrTable.length; i++) {
-            for (int j = 0; j < arrTable[i].length; j++) {
-                System.out.print(arrTable[i][j] + " ");
+        for (int[] ints : arrTable) {
+            for (int anInt : ints) {
+                System.out.print(anInt + " ");
             }
             System.out.println();
         }
